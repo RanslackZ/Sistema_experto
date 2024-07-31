@@ -15,9 +15,9 @@ El proyecto está dividido en los siguientes archivos:
     main.py - Archivo principal que contiene la lógica de la interfaz gráfica.
     guitarra_knowledge.py - Archivo que contiene las reglas del sistema experto.
 
-##Archivo guitarra_knowledge.py
+## Archivo guitarra_knowledge.py
 
-###Este archivo define las reglas y hechos del sistema experto utilizando la biblioteca experta.
+### Este archivo define las reglas y hechos del sistema experto utilizando la biblioteca experta.
 
 
 ```python
@@ -63,9 +63,9 @@ El proyecto está dividido en los siguientes archivos:
             self.declare(Fact(detalle="Dedica 15 minutos a estudiar una técnica avanzada y 15 minutos a improvisar sobre una base"))
 
 ```
-##Archivo main.py
+## Archivo main.py
 
-###Este archivo contiene la lógica para la interfaz gráfica de usuario utilizando tkinter.
+### Este archivo contiene la lógica para la interfaz gráfica de usuario utilizando tkinter.
 
 ```python
 
