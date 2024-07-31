@@ -172,10 +172,10 @@ Para ejecutar el sistema experto, simplemente corre el archivo main.py:
 
 ```
 > [!IMPORTANT]
-> IMPORTANTE
+> IMPORTANTE:
 > Asegúrate de tener todas las bibliotecas necesarias instaladas. Puedes instalarlas utilizando pip:
 
 ```bash
-    pip install experta
+    pip install experta tkinter
 
 ```
