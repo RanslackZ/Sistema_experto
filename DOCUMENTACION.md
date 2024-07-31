@@ -1,21 +1,21 @@
 # Sistema Experto para Aprender Guitarra
 
 Este proyecto implementa un sistema experto para recomendar prácticas de guitarra según el nivel del usuario y el tiempo disponible para la práctica diaria. El sistema usa la biblioteca experta para la lógica de inferencia y tkinter para la interfaz gráfica de usuario.
-Requisitos
+## Requisitos:
 
-Python 3.x
-    Bibliotecas:
-    tkinter
-    experta
+* Python 3.x
+* Bibliotecas:
+      * tkinter
+      * experta
 
-Estructura del Proyecto
+# Estructura del Proyecto
 
 El proyecto está dividido en los siguientes archivos:
 
     main.py - Archivo principal que contiene la lógica de la interfaz gráfica.
     guitarra_knowledge.py - Archivo que contiene las reglas del sistema experto.
 
-## Archivo guitarra_knowledge.py
+## Archivo "guitarra_knowledge.py"
 
 ### Este archivo define las reglas y hechos del sistema experto utilizando la biblioteca experta.
 
@@ -63,7 +63,7 @@ El proyecto está dividido en los siguientes archivos:
             self.declare(Fact(detalle="Dedica 15 minutos a estudiar una técnica avanzada y 15 minutos a improvisar sobre una base"))
 
 ```
-## Archivo main.py
+## Archivo "main.py"
 
 ### Este archivo contiene la lógica para la interfaz gráfica de usuario utilizando tkinter.
 
@@ -134,41 +134,48 @@ El proyecto está dividido en los siguientes archivos:
 
 Explicación del Código
 
-Instanciación y reseteo del motor de inferencia:
+1. Instanciación y reseteo del motor de inferencia:
 
-python
+
+```python
 
 engine = Guitarra()
 engine.reset()
 
-Función obtener_recomendacion:
-    Declara un hecho con el nivel del usuario y ejecuta el motor de inferencia.
-    Busca en los hechos la recomendación correspondiente.
+```
+2. Función obtener_recomendacion:
+    * Declara un hecho con el nivel del usuario y ejecuta el motor de inferencia.
+    * Busca en los hechos la recomendación correspondiente.
 
-Función obtener_detalles:
-    Obtiene la recomendación y declara un hecho con el tiempo disponible.
-     Ejecuta el motor de inferencia y muestra los detalles de la práctica recomendada.
-    Llama a mostrar_vista_principal para volver a la vista principal.
+3. Función obtener_detalles:
+   * Obtiene la recomendación y declara un hecho con el tiempo disponible.
+   * Ejecuta el motor de inferencia y muestra los detalles de la práctica recomendada.
+   * Llama a mostrar_vista_principal para volver a la vista principal.
 
-Función etapa_nivel:
-    Obtiene la recomendación y muestra un mensaje con la recomendación.
-    Reconstruye la interfaz para preguntar el tiempo disponible.
+4. Función etapa_nivel:
+    * Obtiene la recomendación y muestra un mensaje con la recomendación.
+    * Reconstruye la interfaz para preguntar el tiempo disponible.
 
-Función mostrar_vista_principal:
-    Reconstruye la interfaz principal con las opciones de nivel.
-    Configuración de la interfaz gráfica:
-        Configura la ventana principal con un tamaño de 400x300.
-        Inicializa las variables de nivel y tiempo.
-        Llama a mostrar_vista_principal para mostrar la interfaz principal.
+5. Función mostrar_vista_principal:
+    * Reconstruye la interfaz principal con las opciones de nivel.
+    * Configuración de la interfaz gráfica:
+        - Configura la ventana principal con un tamaño de 400x300.
+        - Inicializa las variables de nivel y tiempo.
+        - Llama a mostrar_vista_principal para mostrar la interfaz principal.
 
-Ejecución    
+## Ejecución    
 
 Para ejecutar el sistema experto, simplemente corre el archivo main.py:
 
+```bash
     python main.py
 
+```
 > [!IMPORTANT]
 > IMPORTANTE
 > Asegúrate de tener todas las bibliotecas necesarias instaladas. Puedes instalarlas utilizando pip:
 
+```bash
     pip install experta
+
+```
