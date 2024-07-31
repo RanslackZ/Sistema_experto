@@ -5,8 +5,8 @@ Este proyecto implementa un sistema experto para recomendar prácticas de guitar
 
 * Python 3.x
 * Bibliotecas:
-      * tkinter
-      * experta
+  * tkinter
+  * experta
 
 # Estructura del Proyecto
 
