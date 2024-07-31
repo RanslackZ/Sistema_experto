@@ -132,7 +132,7 @@ El proyecto está dividido en los siguientes archivos:
     root.mainloop()
 ```
 
-Explicación del Código
+## Explicación del Código
 
 1. Instanciación y reseteo del motor de inferencia:
 
