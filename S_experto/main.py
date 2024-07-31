@@ -1,4 +1,3 @@
-# main.py
 import tkinter as tk
 from tkinter import messagebox
 from guitarra_knowledge import Guitarra
@@ -9,6 +8,9 @@ engine.reset()
 
 def obtener_recomendacion():
     nivel = nivel_var.get()
+    if not nivel:
+        messagebox.showwarning("Advertencia", "Por favor, seleccione su nivel.")
+        return ""
     engine.declare(Fact(nivel=nivel))
     engine.run()
     recomendacion = ""
@@ -19,7 +21,12 @@ def obtener_recomendacion():
 
 def obtener_detalles():
     recomendacion = obtener_recomendacion()
+    if not recomendacion:
+        return
     tiempo = tiempo_var.get()
+    if not tiempo:
+        messagebox.showwarning("Advertencia", "Por favor, seleccione el tiempo de práctica.")
+        return
     engine.declare(Fact(recomendacion=recomendacion, tiempo=tiempo))
     engine.run()
     detalle = ""
@@ -31,7 +38,12 @@ def obtener_detalles():
 
 def etapa_nivel():
     nivel = nivel_var.get()
+    if not nivel:
+        messagebox.showwarning("Advertencia", "Por favor, seleccione su nivel.")
+        return
     recomendacion = obtener_recomendacion()
+    if not recomendacion:
+        return
     messagebox.showinfo("Recomendación", recomendacion)
     for widget in root.winfo_children():
         widget.destroy()
